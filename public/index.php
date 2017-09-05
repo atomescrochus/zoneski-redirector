@@ -24,7 +24,7 @@ De retour dans quelques minutes...
         'reseau-www' => 'https://zone.ski',
         'reseau' => 'https://zone.ski',
         'ecole' => 'https://boutique.zone.ski',
-        'ecole-www' => 'https://boutiqu.zone.ski',
+        'ecole-www' => 'https://boutique.zone.ski',
         'forum' => 'https://forum.zone.ski',
         'forum-www' => 'https://forum.zone.ski',
     ]);
@@ -36,14 +36,14 @@ De retour dans quelques minutes...
     $oldURIs->each(function ($uri, $key) use ($currentURI, $newURIs) {
         
         $found = strpos($currentURI, $uri);
-        echo $currentURI;
-        echo "<br>";
-        echo $uri;
-        echo "<br>";
-        echo $found;
-        echo "<br>";
-        echo "---";
-        echo "<br>";
+        // echo $currentURI;
+        // echo "<br>";
+        // echo $uri;
+        // echo "<br>";
+        // echo $found;
+        // echo "<br>";
+        // echo "---";
+        // echo "<br>";
         
         if ($found !== false) {
             $redirectTo = str_replace($uri, $newURIs[$key], $currentURI);
