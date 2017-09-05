@@ -1,5 +1,3 @@
-De retour dans quelques minutes...
-
 <?php
 
     require __DIR__ . '/../vendor/autoload.php';
@@ -31,7 +29,7 @@ De retour dans quelques minutes...
 
     $currentURI = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
-
+    echo "Si vous appercevez cette page et n'êtes pas rediriger dans les prochaines 5 secondes, il y a une erreur. Veuillez contacter l'administrateur (jp@atomescroch.us) et mentionner l'adresse suivante: {$currentURI}";
 
     $oldURIs->each(function ($uri, $key) use ($currentURI, $newURIs) {
         
