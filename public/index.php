@@ -8,21 +8,21 @@ De retour dans quelques minutes...
     use larapack\dd;
 
     $oldURIs = collect([
-        'reseau-www' => 'https://www.zoneski.com/reseau/',
-        'reseau' => 'https://zoneski.com/reseau/',
-        'ecole-www' => 'https://www.zoneski.com/ecole/',
-        'ecole' => 'https://zoneski.com/ecole/',
-        'forum' => 'https://zoneski.com/forum/',
-        'forum-www' => 'https://www.zoneski.com/forum/',
+        'reseau-www' => 'https://www.zoneski.com/reseau',
+        'reseau' => 'https://zoneski.com/reseau',
+        'ecole-www' => 'https://www.zoneski.com/ecole',
+        'ecole' => 'https://zoneski.com/ecole',
+        'forum' => 'https://zoneski.com/forum',
+        'forum-www' => 'https://www.zoneski.com/forum',
     ]);
 
     $newURIs = collect([
-        'reseau-www' => 'https://zone.ski/',
-        'reseau' => 'https://zone.ski/',
-        'ecole' => 'https://boutiqu.zone.ski/',
-        'ecole-www' => 'https://boutiqu.zone.ski/',
-        'forum' => 'https://forum.zone.ski/',
-        'forum-www' => 'https://forum.zone.ski/',
+        'reseau-www' => 'https://zone.ski',
+        'reseau' => 'https://zone.ski',
+        'ecole' => 'https://boutiqu.zone.ski',
+        'ecole-www' => 'https://boutiqu.zone.ski',
+        'forum' => 'https://forum.zone.ski',
+        'forum-www' => 'https://forum.zone.ski',
     ]);
 
     $currentURI = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
@@ -32,14 +32,14 @@ De retour dans quelques minutes...
     $oldURIs->each(function ($uri, $key) use ($currentURI, $newURIs) {
         
         $found = strpos($currentURI, $uri);
-        echo $currentURI;
-        echo "<br>";
-        echo $uri;
-        echo "<br>";
-        echo $found;
-        echo "<br>";
-        echo "---";
-        echo "<br>";
+        // echo $currentURI;
+        // echo "<br>";
+        // echo $uri;
+        // echo "<br>";
+        // echo $found;
+        // echo "<br>";
+        // echo "---";
+        // echo "<br>";
         
         if ($found !== false) {
             $redirectTo = str_replace($uri, $newURIs[$key], $currentURI);
