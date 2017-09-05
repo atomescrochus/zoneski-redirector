@@ -32,6 +32,7 @@ De retour dans quelques minutes...
     $oldURIs->each(function ($uri, $key) use ($currentURI, $newURIs) {
         
         $found = strpos($currentURI, $uri);
+        dd($currentURI, $uri, $found);
         
         if ($found !== false) {
             $redirectTo = str_replace($uri, $newURIs[$key], $currentURI);
