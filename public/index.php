@@ -12,8 +12,8 @@ De retour dans quelques minutes...
         'reseau' => 'https://zoneski.com/reseau/',
         'ecole-www' => 'https://www.zoneski.com/ecole/',
         'ecole' => 'https://zoneski.com/ecole/',
-        'forum' => 'https://zoneski.com/forum/'
-        'forum-www' => 'https://www.zoneski.com/forum/'
+        'forum' => 'https://zoneski.com/forum/',
+        'forum-www' => 'https://www.zoneski.com/forum/',
     ]);
 
     $newURIs = collect([
