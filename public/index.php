@@ -1,3 +1,5 @@
+De retour dans quelques minutes...
+
 <?php
 
     require __DIR__ . '/../vendor/autoload.php';
@@ -6,15 +8,21 @@
     use larapack\dd;
 
     $oldURIs = collect([
-        'reseau' => 'https://www.zoneski.com/reseau/',
-        'ecole' => 'https://www.zoneski.com/ecole/',
-        'forum' => 'https://www.zoneski.com/forum/'
+        'reseau-www' => 'https://www.zoneski.com/reseau/',
+        'reseau' => 'https://zoneski.com/reseau/',
+        'ecole-www' => 'https://www.zoneski.com/ecole/',
+        'ecole' => 'https://zoneski.com/ecole/',
+        'forum' => 'https://zoneski.com/forum/'
+        'forum-www' => 'https://www.zoneski.com/forum/'
     ]);
 
     $newURIs = collect([
+        'reseau-www' => 'https://zone.ski/',
         'reseau' => 'https://zone.ski/',
         'ecole' => 'https://boutiqu.zone.ski/',
+        'ecole-www' => 'https://boutiqu.zone.ski/',
         'forum' => 'https://forum.zone.ski/',
+        'forum-www' => 'https://forum.zone.ski/',
     ]);
 
     $currentURI = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
