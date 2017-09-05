@@ -8,6 +8,8 @@ De retour dans quelques minutes...
     use larapack\dd;
 
     $oldURIs = collect([
+        'root-www' => 'https://www.zoneski.com',
+        'root' => 'https://zoneski.com',
         'reseau-www' => 'https://www.zoneski.com/reseau',
         'reseau' => 'https://zoneski.com/reseau',
         'ecole-www' => 'https://www.zoneski.com/ecole',
@@ -17,9 +19,11 @@ De retour dans quelques minutes...
     ]);
 
     $newURIs = collect([
+        'root-www' => 'https://zone.ski',
+        'root' => 'https://zone.ski',
         'reseau-www' => 'https://zone.ski',
         'reseau' => 'https://zone.ski',
-        'ecole' => 'https://boutiqu.zone.ski',
+        'ecole' => 'https://boutique.zone.ski',
         'ecole-www' => 'https://boutiqu.zone.ski',
         'forum' => 'https://forum.zone.ski',
         'forum-www' => 'https://forum.zone.ski',
@@ -32,14 +36,14 @@ De retour dans quelques minutes...
     $oldURIs->each(function ($uri, $key) use ($currentURI, $newURIs) {
         
         $found = strpos($currentURI, $uri);
-        // echo $currentURI;
-        // echo "<br>";
-        // echo $uri;
-        // echo "<br>";
-        // echo $found;
-        // echo "<br>";
-        // echo "---";
-        // echo "<br>";
+        echo $currentURI;
+        echo "<br>";
+        echo $uri;
+        echo "<br>";
+        echo $found;
+        echo "<br>";
+        echo "---";
+        echo "<br>";
         
         if ($found !== false) {
             $redirectTo = str_replace($uri, $newURIs[$key], $currentURI);
